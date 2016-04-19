@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>内蒙古安监局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "微软雅黑";
+        }
+        body{
+            background-color: #eee;
+        }
+        ul{
+            list-style: none;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+        .container .header{
+            width: 1200px;
+            background-color: #fff;
+
+        }
+        .header .header_img img{
+            display: block;
+            width: 1200px;
+            height: auto;
+        }
+        .header_nav{
+            margin-top: 5px;
+            width: 1200px;
+            height:50px;
+            background:url('./images/j1.png')no-repeat left center, url('./images/j2.png') no-repeat right center;
+            background-color: #3f88e6;
+            background-size: auto 100% ;
+        }
+        .header_nav ul{
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header_nav ul li{
+            width: 200px;
+            height: 50px;
+            float: left;
+        }
+        .header_nav ul  li a{
+           line-height: 50px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .header_nav ul  li img{
+            line-height: 50px;
+            color: #fff;
+            /*font-size: 20px;*/
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right:10px ;
+
+        }
+        .header_nav ul  li:hover{
+            /*border: 1px solid  #3f88e6;*/
+            background-color: #0066CC;
+        }
+        .header_list {
+            width: 1200px;
+            height: 35px;
+            padding-bottom: 5px;
+            margin: 5px auto;
+        }
+        .header_list .header_list_left{
+            width: 690px;
+            height: 30px;
+            float: left;
+            margin-right: 10px;
+        }
+        .header_list .header_list_right{
+            width: 500px;
+            height: 30px;
+            float: right;
+            text-align: right;
+        }
+        .header_list_left .top_span{
+            color:#3f88e6 ;
+            width: 650px;
+            padding-left: 40px;
+            position: absolute;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 1px;
+        }
+        .header_list_right input{
+            line-height: 30px;
+        }
+        .header_list_right .text_input{
+            width: 200px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header_list_right .button_input{
+            height: 32px;
+            width: 50px;
+            margin-right: 10px;
+            background: #3f88e6;
+            border: 0;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .content{
+            width: 1200px;
+          margin:5px auto;
+        }
+        .content .cTop{
+            width: 1200px;
+            height: 380px;
+            margin: 10px auto;
+        }
+        .cTop .cTop_left{
+            width: 740px;
+            height: 380px;
+            background-color: #fff;
+            float: left;
+            margin-right: 10px;
+        }
+        .cTop_left img{
+            width: 720px;
+            height: 360px;
+            border: 0;
+            padding: 10px ;
+        }
+        .cTop .cTop_right{
+            width: 450px;
+            height: 380px;
+            background-color: #fff;
+            float: left;
+        }
+        .cTop_right .cTop_right_navhead{
+            width: 440px;
+            height: 40px;
+            padding: 0 5px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .cTop_right_navhead ul li{
+            width: 220px;
+            height: 38px;
+            float: left;
+            line-height: 38px;
+            border-bottom: 1px solid #eee;
+            /*background-color: #3f88e0;*/
+        }
+        .cTop_right_navhead ul li:nth-child(1){
+
+            border-bottom:2px solid #3f88e0 ;
+            /*background-color: #3f88e0;*/
+        }
+
+        .cTop_right_navhead ul li a{
+            color: #000;
+            letter-spacing: 2px;
+            font-size: 16px;
+            font-weight: 200;
+        }
+
+        .cTop_right_list .divimg{
+            width: 20px;
+            height: 20px;
+            line-height:20px;
+            padding: 5px ;
+            display: inline-block;
+            border: 0;
+            text-align: center;
+            background: url("./images/dian.jpg") no-repeat center;
+            float: left;
+        }
+        .cTop_right_list a{
+            width: 300px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            font-size: 14px;
+            color: #000;
+            padding-right: 5px;
+        }
+        .cTop_right_list .time{
+            width: 105px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .content .cMiddle{
+            width: 1200px;
+            height: 280px;
+            margin: 10px auto;
+        }
+        .cMiddle .cm_left{
+            width: 740px;
+            height: 260px;
+            background-color: #fff;
+            float: left;
+            margin-right: 10px;
+            /*padding: 10px;*/
+            /*border: 1px solid #000;*/
+        }
+        .cm_left .cm_left_header{
+            width: 740px;
+            height: 38px;
+            margin-bottom: 5px;
+           border-bottom: 2px solid #3f88e0;
+        }
+        .cm_left_header h3{
+            display: inline-block;
+            width: 700px;
+            padding-left: 40px;
+            height: 38px;
+            line-height: 38px;
+            color: #3f88e0;
+        }
+        .cm_left  .cm_list{
+            width: 190px;
+            height: 230px;
+            float: left;
+            /*margin-right: 18px;*/
+            /*padding-right: 30px;*/
+        }
+        .cm_list ul{
+            width: 130px;
+            height: 210px;
+            margin: 10px 10px;
+            padding: 0px 10px;
+
+            text-align: center;
+            border-right:2px solid #eee ;
+        }
+        .cm_list ul li {
+            width: 120px;
+            height: 30px;
+            margin-bottom: 5px;
+
+            padding: 0 5px;
+            /*background-color: #ddd;*/
+            line-height: 27px;
+
+            text-indent: 3px;
+            text-align: center;
+
+        }
+        .cm_list ul li a{
+            width: 120px;
+            height: 27px;
+            /*background-color: #ddd;*/
+            line-height: 27px;
+            color: #000;
+            /*text-align: center;*/
+            /*color: ;*/
+        }
+
+        .cm_left .cm_content{
+            width: 530px;
+            height: 210px;
+            float: left;
+            /*background-color: #0066CC;*/
+        }
+        .cm_content ul{
+            width: 500px;
+            height: 210px;
+            margin: 10px 10px;
+            padding: 0px 5px;
+        }
+        .cm_content ul li{
+            width: 500px;
+            height: 30px;
+        }
+        .cm_content li .divimg{
+            width: 20px;
+            height: 20px;
+            line-height:20px;
+            display: inline-block;
+            padding: 5px ;
+            border: 0;
+            text-align: center;
+            background: url("./images/dian.jpg") no-repeat center;
+            float: left;
+        }
+        .cm_content li a{
+            width: 350px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            font-size: 14px;
+            color: #000;
+            padding-right: 5px;
+        }
+        .cm_content li .time{
+            width: 105px;
+            height: 30px;
+            display: inline-block;
+            line-height: 30px;
+            font-size: 14px;
+            color: #000;
+        }
+    </style>
+
+    <style>
+        @charset "utf-8";
+        /* CSS Document */
+
+
+        /*背景渐变色*/
+        /*背景渐变色 结束*/
+
+        body, div, ul, li{
+            margin:0;
+            padding:0;
+            font-size:14px;/*其他字体大小*/
+        }
+
+        a:link, a:visited {
+            text-decoration:none;
+
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0099CC;
+            text-decoration: none;
+            height: auto;
+        }
+
+        ul, ul li {
+            list-style-type:none;
+        }
+
+        /* leftsead 返回顶部*/
+
+        #leftsead{width:161px;height:200px;position:fixed;bottom:20px;right:0px; z-index:200;}/**/
+        *html #leftsead{margin-top:300px;position:absolute;}
+        #leftsead li{width:161px;height:60px;}
+        #leftsead li img{float:right;}
+        #leftsead li a{height:49px;float:right;display:block;min-width:47px;max-width:161px;}
+        #leftsead li a .shows{display:block;}
+        #leftsead li a .hides{margin-right:-143px;cursor:pointer;cursor:hand;}
+        #leftsead li a.weibo .hides{display:none;position:absolute;right:143px;}
+        #leftsead li a.weibo .wm2{display:none;position:absolute;right:143px;}
+
+
+    </style>
+    <script src="tools/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <!--header start-->
+    <div class="header">
+        <div class="header_img"><img src="images/Top.jpg"></div>
+        <div class="header_nav">
+            <ul>
+                <li><img src="images/p_1.png"><a href="#">首页</a> </li>
+                <li><img src="images/1.png"><a href="#">信息公开</a> </li>
+                <li><img src="images/2.png"><a href="#">党建工作</a> </li>
+                <li><img src="images/3.png"><a href="#">业务工作</a> </li>
+                <li><img src="images/4.png"><a href="#">政民互动</a> </li>
+            </ul>
+        </div>
+        <div class="header_list">
+            <div class="header_list_left">
+                <span class="top_span">2016年3月1日 星期二    空气质量41 优 晴到多云 2℃～12℃ </span>
+            </div>
+            <div class="header_list_right">
+                <input type="text" class="text_input" placeholder="搜索"><input type="button" class="button_input" value="检 索">
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+
+    <!--content start-->
+    <div class="content">
+        <div class="cTop">
+            <div class="cTop_left"><img src="images/p.jpg"></div>
+            <div class="cTop_right">
+                <div class="cTop_right_navhead">
+                    <ul>
+                        <li><a href="#">重要新闻</a> </li>
+                        <li><a href="#">监管动态</a> </li>
+                    </ul>
+                </div>
+                <div class="cTop_right_list">
+                    <ul>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区安监局组织观看“三严三实”专题教...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区安监局组织观看“三严三实”专题教...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区安监局组织观看“三严三实”专题教...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开...</a><span class="time">[2016-02-01]</span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cMiddle">
+            <div class="cm_left">
+                <div class="cm_left_header"><h3>政务公开</h3> </div>
+                <div class="cm_list">
+                    <ul>
+                        <li style="background-color: #0066CC"><a href="#" style="color: #fff" >公&nbsp;&nbsp;&nbsp;文&nbsp;&nbsp;&nbsp;公&nbsp;&nbsp;&nbsp;告</a> </li>
+                        <li><a href="#" >政&nbsp;&nbsp;&nbsp;策&nbsp;&nbsp;&nbsp;法&nbsp;&nbsp;&nbsp;规</a> </li>
+                        <li><a href="#">行政&nbsp;许可&nbsp;公示</a> </li>
+                        <li><a href="#">行政&nbsp;处罚&nbsp;公示</a> </li>
+                        <li><a href="#" >事&nbsp;&nbsp;&nbsp;故&nbsp;&nbsp;&nbsp;通&nbsp;&nbsp;&nbsp;报</a> </li>
+                        <li><a href="#" >黑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</a> </li>
+                    </ul>
+                </div>
+                <div class="cm_content">
+                    <ul>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </li>
+                        <li><a href="#">1111</a> </li>
+                        <li><a href="#">1111</a> </li>
+                        <li><a href="#">1111</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cm_right"></div>
+        </div>
+        <div class="cButtom"></div>
+    </div>
+    <!--content end-->
+
+    <!--footer start-->
+  <!--  <div class="footer">
+        <div class="friend_link">
+            <ul>
+                <li><img src="images/YQ1.jpg"></li>
+                <li><img src="images/YQ2.jpg" style="width: 200px"></li>
+                <li><img src="images/YQ3.jpg"></li>
+            </ul>
+        </div>
+        &lt;!&ndash;end friend_link&ndash;&gt;
+
+        &lt;!&ndash;start introduce&ndash;&gt;
+        <div class="introduce">
+            <div class="footer_left">
+                <table>
+
+                    <tr>
+                        &lt;!&ndash;<td rowspan="3">内蒙古自治区安监局</td>&ndash;&gt;
+                        <td >友情链接：</td>
+                        <td>呼和浩特市</td>
+                        <td>包头市</td>
+                        <td>呼伦贝尔市</td>
+                        <td>兴安盟</td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td>通辽市</td>
+                        <td>赤峰市</td>
+                        <td>锡林郭勒盟</td>
+                        <td>乌兰察布市</td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td>乌海市</td>
+                        <td>鄂尔多斯市</td>
+                        <td>巴彦淖尔市</td>
+                        <td>阿拉善盟</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-right">
+                <table>
+                    <tr><td>Copyright · 2013-2016 All Rights reserved</td></tr>
+                    <tr><td>内蒙古自治区安全生产监督管理局</td></tr>
+                    <tr><td>蒙ICP备08100002号</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>-->
+    <!--footer end-->
+</div>
+
+<div>
+    <div id="leftsead">
+        <ul>
+            <li><!--web-->
+                <a href="#" class="tooltip">
+                    <img src="./images/dianhua.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/dianhua.jpg" width="145" class="wm2" style="display:none;margin:-50px 57px 0 0" />			</a>		</li>
+            <li><!--微博-->
+                <a href="http://weibo.com/u/5134190578/" class="tooltip">
+                    <img src="./images/weibo.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wb.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+            <li><!-- -->
+                <a href="http://www.hubeisafety.gov.cn/" class="tooltip">
+
+                    <img src="./images/weixin.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wx.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+
+            <!--    <li id="tel">
+                    <a href="javascript:void(0)">
+                        <div class="hides" style="width:161px;display:none;" id="tels">
+                            <div class="hides" id="p1">
+                                <img src="./images/ll05.png"></div>
+                            <div class="hides" id="p3"><span style="color:#FFF;font-size:12px">027-87360088</span></div>
+                        </div>
+                        <img src="./images/phone.png" width="47" height="49" class="shows" /> </a>        </li>
+                <li id="btn">
+                    <a id="top_btn">
+                        <div class="hides" style="width:161px;display:none">
+                            <img src="./images/ll06.png" width="161" height="49" /></div>
+                        <img src="./images/l06.png" width="47" height="49" class="shows" /></a>    </li>-->
+        </ul>
+    </div>
+
+</div>
+
+<script>
+
+    $(document).ready(function() {
+
+        $("#leftsead a").hover(function() {
+            if ($(this).prop("className") == "tooltip") {
+                $(this).children("img.hides").show();
+            } else {
+                $(this).children("div.hides").show();
+                $(this).children("img.shows").hide();
+                $(this).children("div.hides").animate({ marginRight: '0px' }, '0');
+            }
+        }, function() {
+            if ($(this).prop("className") == "tooltip") {
+                $(this).children("img.hides").hide();
+            } else {
+                $(this).children("div.hides").animate({ marginRight: '-163px' }, 0, function() { $(this).hide(); $(this).next("img.shows").show(); });
+            }
+        });
+
+        $("#top_btn").click(function() { if (scroll == "off") return; $("html,body").animate({ scrollTop: 0 }, 600); });
+
+        //右侧导航 - 二维码
+        $(".tooltip").mouseover(function() {
+            $(this).children(".wm2").show();
+        })
+        $(".tooltip").mouseout(function() {
+            $(this).children(".wm2").hide();
+        });
+
+
+    });
+</script>
+<!--返回顶部 结束-->
+<!--导航栏滚动-->
+
+
+<!--导航栏滚动 结束-->
+<script>
+    function test2() {
+        var frameWin = document.getElementById("frameWin");
+        var newHeight;
+        if (frameWin.Document) {
+            newHeight = frameWin.Document.body.scrollHeight + 20 + "px";
+        } else {
+            newHeight = frameWin.contentDocument.body.scrollHeight + 20 + "px";
+        }
+        frameWin.style.height = newHeight;
+    }
+</script>
+</body>
+</html>

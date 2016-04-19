@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="tools/jquery-1.12.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="tools/style.css">
+
+    <style>
+
+        .PD {
+            width: 1200px;
+            height: 700px;
+            margin: 10px auto;
+            /*background-color: #fff;*/
+        }
+        .PD_left{
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+            background-color: #fff;
+            float: left;
+        }
+        .PD_right{
+            width: 840px;
+            height: 700px;
+            background-color: #fff;
+            float: left;
+            padding: 0 20px;
+        }
+        .PD_left .PD_left_header{
+            width: 300px;
+            height: 70px;
+            margin-bottom: 5px;
+            border-top:5px solid #0072e4 ;
+
+        }
+        .PD_right .PD_right_header{
+            width: 840px;
+            height: 75px;
+            margin-bottom: 5px;
+
+            background:url("images/menggubao.png") no-repeat ;
+            background-position-x: 700px;
+            background-position-y:center ;
+        }
+        .PD_left .PD_left_header .L_header_link{
+            display: block;
+            width: 260px;
+            height: 70px;
+            line-height: 70px;
+
+            background:url("images/ico1.jpg") no-repeat ;
+            background-position-x:50px;
+            background-position-y:center ;
+            text-align: center;
+            margin: 0 20px;
+            border-bottom:1px solid #eee ;
+        }
+        .PD_right .PD_right_header .r_header_link{
+            width: 160px;
+            height:75px;
+
+            display: inline-block;
+            line-height: 75px;
+
+            background: url("images/huiwen.png") repeat-x;
+            background-size:auto 5px ;
+            background-position-y:70px ;
+            float: left;
+        }
+        .PD_left .PD_left_header .L_header_link a{
+            display: inline-block;
+            width: 260px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 70px;
+            line-height: 70px;
+            color:#005dd1;
+        }
+        .PD_right .PD_right_header .r_header_link a{
+            display: inline-block;
+            width: 160px;
+            font-size: 20px;
+            font-weight: bold;
+            height: 75px;
+            line-height: 75px;
+            color: #005dd1;
+        }
+        .PD_right .PD_right_header .r_header_bg{
+            display: inline-block;
+            width: 680px;
+            height: 73px;
+            border-bottom: 2px solid #0072e4;
+            float: left;
+        }
+        .PD_left_list{
+            width: 300px;
+            height: auto;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        .PD_left_list ul{
+            display: block;
+            width: 260px;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .PD_left_list ul li {
+            width: 260px;
+            height: 50px;
+            margin-bottom: 5px;
+            line-height:50px;
+            text-indent: 3px;
+            text-align: center;
+        }
+        .PD_left_list ul li a{
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            font-size:16px ;
+            color: #000;
+        }
+        .PD_right .PD_right_content {
+            width: 840px;
+            height: 510px;
+            margin: 5px auto;
+        }
+        .PD_right .PD_right_content ul{
+            width: 830px;
+            height: 500px;
+            padding: 5px 5px;
+        }
+        .PD_right .PD_right_content ul li{
+              width: 830px;
+              height: 49px;
+              border-bottom: 1px dashed #eee;
+          }
+        .PD_right .PD_right_content ul li .divimg{
+            width: 20px;
+            height:49px;
+            line-height:49px;
+            display: inline-block;
+            padding: 0 5px;
+            border: 0;
+            text-align: center;
+            background: url("./images/dian.jpg") no-repeat center;
+            background-size: 100% auto;
+            float: left;
+        }
+        .PD_right .PD_right_content ul li  a{
+            width: 640px;
+            height: 49px;
+            display: inline-block;
+            line-height:49px;
+            font-size: 16px;
+            color: #000;
+            padding:0 5px;
+            letter-spacing: 1.5px;
+        }
+        .PD_right .PD_right_content ul li  .time{
+            width: 150px;
+            height:49px;
+            display: inline-block;
+            line-height: 49px;
+            font-size: 16px;
+            color: #000;
+        }
+        .PD_right_fy{
+
+            width: 840px;
+            height: 100px;
+        }
+        .PD_right_fy ul{
+            text-align: center;
+            width: 840px;
+            height: 100px;
+            line-height: 100px;
+        }
+        .PD_right_fy ul  li{
+             width: auto;
+             height: 30px;
+
+            display: inline-block;
+            display: inline;
+         }
+        .PD_right_fy ul  .lip p{
+            width: auto;
+            height: 30px;
+            margin: 35px 5px;
+            display: inline-block;
+            display: inline;
+        }
+        .PD_right_fy ul  .liw a{
+            width: 60px;
+            height: 30px;
+            display: inline-block;
+            color: #000;
+            background-color: #ddd;
+            line-height: 30px;
+        }
+        .PD_right_fy ul  .lin a{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            color: #000;
+            background-color: #ddd;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--header start-->
+    <div class="header">
+        <div class="header_img"><img src="images/Top.jpg"></div>
+        <div class="header_nav">
+            <ul>
+                <li><img src="images/p_1.png"><a href="#">首页</a> </li>
+                <li><img src="images/1.png"><a href="#">信息公开</a> </li>
+                <li><img src="images/2.png"><a href="#">党建工作</a> </li>
+                <li><img src="images/3.png"><a href="#">业务工作</a> </li>
+                <li><img src="images/4.png"><a href="#">政民互动</a> </li>
+            </ul>
+        </div>
+        <div class="header_list">
+            <div class="header_list_left">
+                <span class="top_span">2016年3月1日 星期二    空气质量41 优 晴到多云 2℃～12℃ </span>
+            </div>
+            <div class="header_list_right">
+                <input type="text" class="text_input" placeholder="搜索"><input type="button" class="button_input" value="检 索">
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+
+    <!--content start-->
+    <div class="content">
+
+        <div class="PD">
+           <div class="PD_left">
+               <div class="PD_left_header">
+                   <div class="L_header_link"><a href="#">政务公开</a></div>
+               </div>
+               <div class="PD_left_list">
+                   <ul>
+                       <li style="background: url('images/jiantou.png') no-repeat center center;background-size: 260px 45px;"><h3 style="color: #fff" >公&nbsp;&nbsp;文&nbsp;&nbsp;&nbsp;公&nbsp;&nbsp;告</h3> </li>
+                       <li><h3 href="#" >政&nbsp;&nbsp;策&nbsp;&nbsp;&nbsp;法&nbsp;&nbsp;规</h3> </li>
+                       <li><h3 href="#">行政许可公示</h3> </li>
+                       <li><h3 href="#">行政处罚公示</h3> </li>
+                       <li><h3 href="#" >事&nbsp;&nbsp;故&nbsp;&nbsp;&nbsp;通&nbsp;&nbsp;报</h3> </li>
+                       <li><h3 href="#" >黑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</h3> </li>
+                   </ul>
+               </div>
+           </div>
+
+            <div class="PD_right">
+                <div class="PD_right_header">
+                    <div class="r_header_link"><a href="#">公文公告</a></div>
+                    <div class="r_header_bg"></div>
+                </div>
+                <div class="PD_right_content">
+                    <ul>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开年度工作会议，探索一体化监管新模式</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">关于开展《内蒙古自治区有关部门和单位安全生产工作职责规定》学习宣传活动</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">关于印发《2016年自治区安监局机关党的工作要点》的通知</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区安监局组织观看“三严三实”专题教育展</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区冶金等工贸行业、职业卫生监管召开年度工作会议，探索一体化监管新模式</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">关于开展《内蒙古自治区有关部门和单位安全生产工作职责规定》学习宣传活动</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">关于印发《2016年自治区安监局机关党的工作要点》的通知</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议</a><span class="time">[2016-02-01]</span> </li>
+                        <li><div class="divimg"></div> <a href="#">自治区安监局组织观看“三严三实”专题教育展</a><span class="time">[2016-02-01]</span> </li>
+
+                    </ul>
+                </div>
+                <div class="PD_right_fy">
+                    <ul>
+                        <li class="lip"> <p>共10页</p></li>
+                        <li  class="liw"> <a href="#" >首页</a> </li>
+                        <li class="liw"> <a href="#">上一页</a></li>
+                        <li class="lin"> <a href="#" style="background-color:#0072e4;color: #fff ">1</a> </li>
+                        <li class="lin"><a href="#">2</a></li>
+                        <li class="lin"> <a href="#">3</a> </li>
+                        <li class="lin"> <a href="#">4</a></li>
+                        <li class="lin"><a href="#">5</a></li>
+                        <li class="liw"> <a href="#">下一页</a> </li>
+                        <li class="liw"> <a href="#">尾页</a> </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--content end-->
+
+    <!--footer start-->
+    <div class="footer">
+        <div class="friend_link">
+            <ul>
+                <li><img src="images/YQ1.jpg"></li>
+                <li><img src="images/YQ2.jpg" style="width: 200px"></li>
+                <li><img src="images/YQ3.jpg"></li>
+            </ul>
+        </div>
+        <!--end friend_link-->
+
+        <!--start introduce-->
+        <div class="introduce">
+            <div class="footer_left">
+                <table>
+
+                    <tr>
+                        <!--<td rowspan="3">内蒙古自治区安监局</td>-->
+                        <td >友情链接：</td>
+                        <td>呼和浩特市</td>
+                        <td>包&nbsp;&nbsp;&nbsp;头&nbsp;&nbsp;&nbsp;市</td>
+                        <td>呼伦贝尔市</td>
+                        <td>兴&nbsp;&nbsp;&nbsp;安&nbsp;&nbsp;&nbsp;盟</td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td>通&nbsp;&nbsp;&nbsp;辽&nbsp;&nbsp;&nbsp;市</td>
+                        <td>赤&nbsp;&nbsp;&nbsp;峰&nbsp;&nbsp;&nbsp;市</td>
+                        <td>锡林郭勒盟</td>
+                        <td>乌兰察布市</td>
+                    </tr>
+                    <tr>
+                        <td ></td>
+                        <td>乌&nbsp;&nbsp;&nbsp;海&nbsp;&nbsp;&nbsp;市</td>
+                        <td>鄂尔多斯市</td>
+                        <td>巴彦淖尔市</td>
+                        <td>阿&nbsp;拉&nbsp;善&nbsp;盟</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-right">
+                <table>
+                    <tr><td>Copyright · 2013-2016 All Rights reserved</td></tr>
+                    <tr><td>内蒙古自治区安全生产监督管理局</td></tr>
+                    <tr><td>蒙ICP备08100002号</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--footer end-->
+</div>
+
+<div>
+    <div id="leftsead">
+        <ul>
+            <li><!--web-->
+                <a href="#" class="tooltip">
+                    <img src="./images/dianhua.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/dianhua.jpg" width="145" class="wm2" style="display:none;margin:-50px 57px 0 0" />			</a>		</li>
+            <li><!--微博-->
+                <a href="http://weibo.com/u/5134190578/" class="tooltip">
+                    <img src="./images/weibo.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wb.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+            <li><!-- -->
+                <a href="http://www.hubeisafety.gov.cn/" class="tooltip">
+
+                    <img src="./images/weixin.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wx.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="tools/app.js"></script>
+
+</body>
+</html>

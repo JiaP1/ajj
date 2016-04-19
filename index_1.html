@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="tools/jquery-1.12.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="tools/style.css">
+</head>
+<body>
+<div class="container">
+    <!--header start-->
+    <div class="header">
+        <div class="header_img"><img src="images/Top.jpg"></div>
+        <div class="header_nav">
+            <ul>
+                <li><img src="images/p_1.png"><a href="#">首页</a> </li>
+                <li><img src="images/1.png"><a href="#">信息公开</a> </li>
+                <li><img src="images/2.png"><a href="#">党建工作</a> </li>
+                <li><img src="images/3.png"><a href="#">业务工作</a> </li>
+                <li><img src="images/4.png"><a href="#">政民互动</a> </li>
+            </ul>
+        </div>
+        <div class="header_list">
+            <div class="header_list_left">
+                <span class="top_span">
+                    <script type="text/javascript">
+                        var sWeek = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+                        var dNow = new Date();
+                        var CalendarData=new Array(100);var madd=new Array(12);var tgString="甲乙丙丁戊己庚辛壬癸";var dzString="子丑寅卯辰巳午未申酉戌亥";var numString="一二三四五六七八九十";var monString="正二三四五六七八九十冬腊";var weekString="日一二三四五六";var sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";var cYear,cMonth,cDay,TheDate;
+                        CalendarData = new Array(               0xA4B,0x5164B,0x6A5,0x6D4,0x415B5,0x2B6,0x957,0x2092F,0x497,0x60C96,                     0xD4A,0xEA5,0x50DA9,0x5AD,0x2B6,0x3126E, 0x92E,0x7192D,0xC95,0xD4A,                       0x61B4A,0xB55,0x56A,0x4155B, 0x25D,0x92D,0x2192B,0xA95,0x71695,0x6CA,                   0xB55,0x50AB5,0x4DA,0xA5B,0x30A57,0x52B,0x8152A,0xE95,0x6AA,0x615AA,                     0xAB5,0x4B6,0x414AE,0xA57,0x526,0x31D26,0xD95,0x70B55,0x56A,0x96D,                    0x5095D,0x4AD,0xA4D,0x41A4D,0xD25,0x81AA5, 0xB54,0xB6A,0x612DA,0x95B,
+                                0x49B,0x41497,0xA4B,0xA164B, 0x6A5,0x6D4,0x615B4,0xAB6,0x957,0x5092F,
+                                0x497,0x64B, 0x30D4A,0xEA5,0x80D65,0x5AC,0xAB6,0x5126D,0x92E,0xC96,                   0x41A95,0xD4A,0xDA5,0x20B55,0x56A,0x7155B,0x25D,0x92D,0x5192B,0xA95,                   0xB4A,0x416AA,0xAD5,0x90AB5,0x4BA,0xA5B, 0x60A57,0x52B,0xA93,0x40E95);
+                        madd[0]=0;madd[1]=31;madd[2]=59;madd[3]=90;
+                        madd[4]=120;madd[5]=151;madd[6]=181;madd[7]=212;
+                        madd[8]=243;madd[9]=273;madd[10]=304;madd[11]=334;
+                        function GetBit(m,n) {  return (m>>n)&1; }
+                        function e2c()
+                        {
+                            TheDate= (arguments.length!=3) ? new Date() : new Date(arguments[0],arguments[1],arguments[2]);
+                            var total,m,n,k;
+                            var isEnd=false;
+                            var tmp=TheDate.getFullYear();
+                            total=(tmp-1921)*365+Math.floor((tmp-1921)/4)+madd[TheDate.getMonth()]+TheDate.getDate()-38;  if (TheDate.getYear()%4==0&&TheDate.getMonth()>1) { total++;}  for(m=0;;m++)  {    k=(CalendarData[m]<0xfff)?11:12;    for(n=k;n>=0;n--)    {      if(total<=29+GetBit(CalendarData[m],n))      {        isEnd=true; break;      }      total=total-29-GetBit(CalendarData[m],n);    }    if(isEnd) break;  }  cYear=1921 + m; cMonth=k-n+1; cDay=total;  if(k==12)   {    if(cMonth==Math.floor(CalendarData[m]/0x10000)+1) { cMonth=1-cMonth; }    if(cMonth>Math.floor(CalendarData[m]/0x10000)+1)  { cMonth--; }   }}
+                        var D=new Date();
+                        var yy=D.getFullYear();
+                        var mm=D.getMonth()+1;
+                        var dd=D.getDate();
+                        var ww=D.getDay();
+                        var ss=parseInt(D.getTime() / 1000);
+                        function getFullYear(d){// 修正firefox下year错误
+                            yr=d.getYear();if(yr<1000)
+                                yr+=1900;return yr;}
+                        var sValue =+getFullYear(dNow)+"年"+(dNow.getMonth()+1)+"月"+dNow.getDate()+"日"+" "+sWeek[dNow.getDay()]+" ";
+                        document.write(sValue)
+                    </script>
+                </span>
+
+
+            </div>
+            <div class="header_list_middle">
+                  <span class="top_span">
+                    <iframe style="width: 310px;height: 30px;line-height: 30px ;display: inline-block; color:#3f88e6 ;"   scrolling="no"  frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>
+               </span>
+            </div>
+            <div class="header_list_right">
+                <input type="text" class="text_input" placeholder="搜索"><input type="button" class="button_input" value="检 索">
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+
+    <!--content start-->
+    <div class="content">
+        <div class="cTop">
+            <div class="cTop_left">
+                <div class="imglist">
+                    <div class="imglistheader"><img src="images/001.jpg" style="width: 140px;height:40px;."></div>
+                    <div class="imglistcontent">
+
+                            <div class="imglistcontentdiv"><img src="images/l1.jpg"></div>
+                            <div class="imglistcontentdiv"><img src="images/l2.jpg"></div>
+                            <div class="imglistcontentdiv"><img src="images/l3.jpg"></div>
+
+                    </div>
+                </div>
+               <div class="bigImg"><img src="images/p.jpg"></div></div>
+            <div class="cTop_right">
+                <div class="cTop_right_navhead">
+                    <ul id="tab">
+                        <li class="current"><a href="">重要新闻</a>  </li>
+                        <li><a href="#">监管动态</a> </li>
+                    </ul>
+                </div>
+                <div id="content">
+                <div class="cTop_right_list" style="display:block;">
+
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+
+                </div>
+                    <div class="cTop_right_list" >
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">1自治区政府召开全区安全生产电视电话...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cTop_right_list_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cMiddle">
+            <div class="cm_left">
+                <div class="cm_left_header">
+                    <div class="header_link"><a href="#">政务公开</a></div>
+                    <div class="header_bg"></div>
+                </div>
+                <div class="cm_list">
+                    <ul id="tab1">
+                        <li class="now" ><h3  >公&nbsp;&nbsp;文&nbsp;&nbsp;&nbsp;公&nbsp;&nbsp;告</h3> </li>
+                        <li><h3 >政&nbsp;&nbsp;策&nbsp;&nbsp;&nbsp;法&nbsp;&nbsp;规</h3> </li>
+                        <li><h3>行政许可公示</h3> </li>
+                        <li><h3>行政处罚公示</h3> </li>
+                        <li><h3 >事&nbsp;&nbsp;故&nbsp;&nbsp;&nbsp;通&nbsp;&nbsp;报</h3> </li>
+                        <li><h3 >黑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</h3> </li>
+                    </ul>
+                </div>
+                <div class="cm_content" id="cm_content">
+                    <div class="cm_content_div" style="display: block">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">12自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                    <div class="cm_content_div">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">12自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                    <div class="cm_content_div">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">12自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                    <div class="cm_content_div">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">12自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                    <div class="cm_content_div">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                    <div class="cm_content_div">
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">12自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">2自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                        <div class="cm_content_div_li"><div class="divimg"></div> <a href="#">自治区政府召开全区安全生产电视电话会议...</a><span class="time">[2016-02-01]</span> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cm_right"  >
+                <div class="right_img1"><img src="images/yunjisuan.jpg"></div>
+                <div class="right_img2"><img src="images/banshidating-01.jpg"></div>
+
+            </div>
+
+        </div>
+        <div class="by"></div>
+        <div class="cButtom">
+            <div class="BL">
+                <div class="Bheader">
+                    <div class="Bheader_link"><a href="#">业务工作</a> </div>
+                    <div class="Bheader_bg"></div>
+                </div>
+                <div class="Bcontent">
+
+                        <div class="BcontentList BC1"><a href="#" >非&nbsp;&nbsp;煤&nbsp;&nbsp;矿&nbsp;&nbsp;山</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >危&nbsp;险&nbsp;化&nbsp;学品 </a> </div>
+                        <div class="BcontentList"><a href="#">烟&nbsp;&nbsp;花&nbsp;&nbsp;爆&nbsp;&nbsp;竹</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >冶金等八行业</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >综&nbsp;&nbsp;合&nbsp;&nbsp;监&nbsp;&nbsp;管</a>  </div>
+                        <div class="BcontentList"><a href="#" >职&nbsp;&nbsp;业&nbsp;&nbsp;健&nbsp;&nbsp;康</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >应&nbsp;&nbsp;急&nbsp;&nbsp;救&nbsp;&nbsp;援</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >科&nbsp;&nbsp;技&nbsp;&nbsp;规&nbsp;&nbsp;划</a></div>
+                        <div class="BcontentList"><a href="#" >宣&nbsp;&nbsp;传&nbsp;&nbsp;教&nbsp;&nbsp;育</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >安&nbsp;&nbsp;全&nbsp;&nbsp;培&nbsp;&nbsp;训</a> </div>
+                        <div class="BcontentList BC1"><a href="#" >信&nbsp;息&nbsp;化&nbsp;建设</a></div>
+                        <div class="BcontentList"><a href="#" >社&nbsp;会&nbsp;化&nbsp;服务</a></div>
+                </div>
+            </div>
+            <div class="BM">
+                <div class="Bheader">
+                    <div class="Bheader_link"><a href="#">在线视频</a> </div>
+                    <div class="Bheader_bg"></div>
+                </div>
+                <div class="Bcontent">
+                    <div class="Bimg">
+                        <img src="images/zxsp.jpg">.
+                    </div>
+                </div>
+            </div>
+            <div class="BR">
+                <div class="Bheader">
+                    <div class="Bheader_link"><a href="#">政民互动</a> </div>
+                    <div class="Bheader_bg"></div>
+                </div>
+                <div class="Bcontent">
+                    <div class="zmhd">
+                        <div class="zmhddiv">
+                            <div class="iconList"><img src="images/2.jpg"><a href="">领导信箱</a></div>
+                            <div class="iconList"><img src="images/3.jpg"><a href="">在线咨询</a> </div>
+                            <div class="iconList"><img src="images/4.jpg"><a href="">意见征集</a></div>
+                            <div class="iconList"><img src="images/5.jpg"><a href="">查询服务</a></div>
+                            <div class="iconList"><img src="images/7.jpg"><a href="">投诉举报</a></div>
+                            <div class="iconList"><img src="images/8.jpg"><a href="">学习园地</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content end-->
+
+    <!--footer start-->
+      <div class="footer">
+          <div class="friend_link">
+              <ul>
+                  <li><img src="images/YQ1.jpg"></li>
+                  <li><img src="images/YQ2.jpg" style="width: 200px"></li>
+                  <li><img src="images/YQ3.jpg"></li>
+              </ul>
+          </div>
+          <!--end friend_link-->
+
+          <!--start introduce-->
+          <div class="introduce">
+              <div class="footer_left">
+                  <table>
+
+                      <tr>
+                          <!--<td rowspan="3">内蒙古自治区安监局</td>-->
+                          <td >友情链接：</td>
+                          <td>呼和浩特市</td>
+                          <td>包&nbsp;&nbsp;&nbsp;头&nbsp;&nbsp;&nbsp;市</td>
+                          <td>呼伦贝尔市</td>
+                          <td>兴&nbsp;&nbsp;&nbsp;安&nbsp;&nbsp;&nbsp;盟</td>
+                      </tr>
+                      <tr>
+                          <td ></td>
+                          <td>通&nbsp;&nbsp;&nbsp;辽&nbsp;&nbsp;&nbsp;市</td>
+                          <td>赤&nbsp;&nbsp;&nbsp;峰&nbsp;&nbsp;&nbsp;市</td>
+                          <td>锡林郭勒盟</td>
+                          <td>乌兰察布市</td>
+                      </tr>
+                      <tr>
+                          <td ></td>
+                          <td>乌&nbsp;&nbsp;&nbsp;海&nbsp;&nbsp;&nbsp;市</td>
+                          <td>鄂尔多斯市</td>
+                          <td>巴彦淖尔市</td>
+                          <td>阿&nbsp;拉&nbsp;善&nbsp;盟</td>
+                      </tr>
+                  </table>
+              </div>
+              <div class="footer-right">
+                  <table>
+                      <tr><td>地址:内蒙古自治区呼和浩特市赛罕区敕勒川大街1号</td></tr>
+                      <tr><td>Copyright · 2013-2016 All Rights reserved</td></tr>
+                      <tr><td>蒙ICP备08100002号</td></tr>
+                  </table>
+              </div>
+          </div>
+      </div>
+    <!--footer end-->
+</div>
+
+<div>
+    <div id="leftsead">
+        <ul>
+            <li><!--web-->
+                <a href="#" class="tooltip">
+                    <img src="./images/dianhua.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/dianhua.jpg" width="145" class="wm2" style="display:none;margin:-50px 57px 0 0" />			</a>		</li>
+            <li><!--微博-->
+                <a href="http://weibo.com/u/5134190578/" class="tooltip">
+                    <img src="./images/weibo.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wb.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+            <li><!-- -->
+                <a href="http://www.hubeisafety.gov.cn/" class="tooltip">
+
+                    <img src="./images/weixin.png" width="47" height="49" class="shows" />
+
+                    <img src="./images/wx.jpg" width="145" class="wm2" style="display:none;margin:-100px 57px 0 0" />			</a>		</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="tools/app.js"></script>
+
+<script>
+    $(function(){
+        window.onload = function()
+        {
+            var $li = $('#tab li');
+            var $ul = $('#content .cTop_right_list');
+
+            $li.mouseover(function(){
+                var $this = $(this);
+                var $t = $this.index();
+                $li.removeClass();
+                $this.addClass('current');
+                $ul.css('display','none');
+                $ul.eq($t).css('display','block');
+            });
+            var $li1=$('#tab1 li');
+            var $ul1=$('#cm_content .cm_content_div');
+
+            $li1.mouseover(function(){
+                var $this = $(this);
+                var $t = $this.index();
+                $li1.removeClass();
+                $this.addClass('now');
+                $ul1.css('display','none');
+                $ul1.eq($t).css('display','block');
+            });
+        }
+    });
+</script>
+</body>
+</html>
